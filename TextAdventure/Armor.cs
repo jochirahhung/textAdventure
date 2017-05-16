@@ -8,5 +8,7 @@ namespace TextAdventure
 {
     class Armor : Item
     {
+
+
     }
 }
