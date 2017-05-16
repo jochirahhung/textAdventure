@@ -8,7 +8,7 @@
         Title="MainWindow" Height="500" Width="700"
         Background="Silver">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="310" Margin="63,10,0,0" VerticalAlignment="Top" Width="580"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="310" Margin="51,10,0,0" VerticalAlignment="Top" Width="613" Source="/Images/Title.png"/>
         <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="What would you like to do" VerticalAlignment="Top" Width="432"/>
         <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="493,409,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>

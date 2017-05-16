@@ -20,18 +20,6 @@ namespace TextAdventure
         public void  SizeOfInventory(int cap)
         {
             
-            if(cap <= 0)
-            {
-                Items = null;
-            }
-            else if(Items == null)
-            {
-                Items = new int[cap];
-            }
-            else
-            {
-               
-            }
         }
     
     }
