@@ -23,9 +23,9 @@ namespace TextAdventure
         {
             damage = dam;
         }
-        public void setDefense()
+        public void setDefense(int def)
         {
-
+            defense = def
         }
      
     }

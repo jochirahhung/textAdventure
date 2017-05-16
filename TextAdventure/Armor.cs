@@ -13,5 +13,20 @@ namespace TextAdventure
         {
 
         }
+
+
+        public void BronzeArmor()
+        {
+
+        }
+        public void IronArmor()
+        {
+
+        }
+        public void SteelArmor()
+        {
+
+        }
+
     }
 }
