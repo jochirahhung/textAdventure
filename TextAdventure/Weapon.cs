@@ -8,5 +8,6 @@ namespace TextAdventure
 {
     class Weapon
     {
+
     }
 }

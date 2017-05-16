@@ -8,31 +8,7 @@ namespace TextAdventure
 {
     class Inventory
     {
-        public Item [] Items { get; set; }
-
-        public int Capacity { get { return (Items == null) ? 0 : Items.Length; } }
-
-        public Inventory(int storage = 10)
-        {
-            SizeOfInventory(storage); 
-        }
-
-        public void  SizeOfInventory(int cap)
-        {
-            
-            if(cap <= 0)
-            {
-                Items = null;
-            }
-            else if(Items == null)
-            {
-                Items = new int[cap];
-            }
-            else
-            {
-               
-            }
-        }
+     
     
     }
 }
