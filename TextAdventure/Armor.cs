@@ -9,6 +9,9 @@ namespace TextAdventure
     class Armor : Item
     {
 
+        public void LeatherArmor()
+        {
 
+        }
     }
 }
