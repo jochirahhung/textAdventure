@@ -29,7 +29,7 @@ namespace TextAdventure
          */
         private string name;
         private EnemeyTypes type;
-        private int damage, defense, health, level;
+        private int damage=3, defense=2, health=10, level=1;
 
         public Enemy()
         {
@@ -48,66 +48,62 @@ namespace TextAdventure
         public void setEnemy(EnemeyTypes type, int herolvl)
         {
             this.type = type;
-            int dmg = 0, def = 0, hp = 10, enemylevel = 1;
-            setLevel(enemylevel, herolvl);
+            setLevel( herolvl);
+            int lvlmod=0;
             if (type == EnemeyTypes.THEIF)
             {
-
+                if (level>1)
+                {
+                    lvlmod = 5*level;
+                }
             }
             else if (type == EnemeyTypes.THUG)
             {
-
+                lvlmod = 6*level;
             }
             else if (type == EnemeyTypes.TROLL)
             {
-
+                lvlmod = 7 * level;
             }
             else if (type == EnemeyTypes.OGRE)
             {
+                lvlmod = 8 * level;
 
             }
             else if (type == EnemeyTypes.ORC)
             {
+                lvlmod = 9 * level;
 
             }
             else if (type == EnemeyTypes.DRAGON)
             {
+                lvlmod = 10 * level;
 
             }
-            setDamage(dmg);
-            setDefense(def);
-            setHealth(hp);
-
+            damage += lvlmod;
+            defense += lvlmod;
+            health += lvlmod;
         }
         public int getDamage()
         {
             return damage;
         }
-        public void setDamage(int herolvl)
-        {
-
-        }
+        
         public int getDefense()
         {
             return defense;
         }
-        public void setDefense(int herolvl)
-        {
-
-        }
+        
         public int getHealth()
         {
             return health;
         }
-        public void setHealth(int herolvl)
-        {
-
-        }
+        
         public int getLevel()
         {
             return level;
         }
-        public void setLevel(int enemylvl, int herolvl)
+        public void setLevel(int herolvl)
         {
             int[] levels = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             List<int> levelchoices = new List<int>();
@@ -147,7 +143,6 @@ namespace TextAdventure
                 levelchoices.Add(levels[5]);
                 levelchoices.Add(levels[6]);
             }
-
             else if (herolvl == 6)
             {
                 levelchoices.Add(levels[4]);
@@ -164,16 +159,25 @@ namespace TextAdventure
             }
             else if (herolvl == 8)
             {
-
+                levelchoices.Add(levels[6]);
+                levelchoices.Add(levels[7]);
+                levelchoices.Add(levels[8]);
+                levelchoices.Add(levels[9]);
             }
             else if (herolvl == 9)
             {
-
+                levelchoices.Add(levels[7]);
+                levelchoices.Add(levels[8]);
+                levelchoices.Add(levels[9]);
             }
             else if (herolvl == 10)
             {
-
+                levelchoices.Add(levels[8]);
+                levelchoices.Add(levels[9]);
             }
+            Random r = new Random();
+            int randNum=r.Next(1,levelchoices.Capacity+1);
+            level = randNum;
         }
     }
 }
