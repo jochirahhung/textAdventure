@@ -29,7 +29,7 @@ namespace TextAdventure
          */
         private string name;
         private EnemeyTypes type;
-        private int damage=3, defense=2, health=10, level=1;
+        private int damage=3, defense=2, health=10, level=1, exp = 4;
 
         public Enemy()
         {
@@ -178,6 +178,36 @@ namespace TextAdventure
             Random r = new Random();
             int randNum=r.Next(1,levelchoices.Capacity+1);
             level = randNum;
+        }
+        public int getEXP()
+        {
+            return exp;
+        }
+        public void setEXP()
+        {
+            if (type==EnemeyTypes.THEIF)
+            {
+
+            } else if(type == EnemeyTypes.THUG)
+            {
+
+            }
+            else if (type == EnemeyTypes.TROLL)
+            {
+
+            }
+            else if (type == EnemeyTypes.OGRE)
+            {
+
+            }
+            else if (type == EnemeyTypes.ORC)
+            {
+
+            }
+            else if (type == EnemeyTypes.DRAGON)
+            {
+
+            }
         }
     }
 }
