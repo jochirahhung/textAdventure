@@ -12,6 +12,14 @@
         <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="What would you like to do" VerticalAlignment="Top" Width="432"/>
         <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="493,409,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>
+        <Label x:Name="lblHealth" Content="Health: " HorizontalAlignment="Left" Margin="30,438,0,0" VerticalAlignment="Top" Width="46"/>
+        <TextBox x:Name="tbxHealth" HorizontalAlignment="Left" Height="23" Margin="81,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="lblWeaponDur" Content="Weapon Durability" HorizontalAlignment="Left" Margin="125,438,0,0" VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="tbxWeaponDur" HorizontalAlignment="Left" Height="23" Margin="232,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="lblArmorDur" Content="Armor Durability" HorizontalAlignment="Left" Margin="271,438,0,0" VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="tbxArmorDur" HorizontalAlignment="Left" Height="23" Margin="369,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="lblDefense" Content="Defense: " HorizontalAlignment="Left" Margin="415,438,0,0" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="tbxDefense" HorizontalAlignment="Left" Height="23" Margin="474,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
 
     </Grid>
 </Window>
