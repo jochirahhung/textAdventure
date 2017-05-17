@@ -21,28 +21,28 @@ namespace TextAdventure
             string steelarmor = "Steel Armor";
 
             if (tbxAction.contains( leatherarmor)) {
-                armor.durability = 3;
-                player.defense = 6;
+                armor.Text = 3;
+                player.Text = 6;
                     }
             else if (tbx.Actions.contains( bronzearmor))
             {
-                armor.durability = 5;
-                player.defense = 8;
+                tbxArmorDur.Text = 5;
+                player.Text = 8;
             }
             else if (tbx.Actions.contains(ironarmor))
             {
-                armor.durability = 7;
-                player.defense = 10;
+                armor.Text = 7;
+                player.Text = 10;
             }
             else if (tbx.Actions.contains(steelarmor))
             {
-                armor.durability = 9;
-                player.defense = 12;
+                armor.Text = 9;
+                player.Text = 12;
             }
             else
             {
-                armor.durability = 0;
-                player.defense = 1;
+                armor.Text = 0;
+                player.Text = 1;
             }
         }
 
