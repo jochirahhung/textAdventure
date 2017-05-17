@@ -11,22 +11,10 @@ namespace TextAdventure
         //durabilty
         //damage
         //defense
-        int durabilty;
-        int damage;
-        int defense;
-        public void setDurability(int dur)
-        {
-            durabilty = dur;
-        }
-
-        public void setDamage(int dam)
-        {
-            damage = dam;
-        }
-        public void setDefense(int def)
-        {
-            defense = def
-        }
+        int durabilty {get; set;}
+        int damage {get; set;}
+        int defense {get; set;}
+ 
      
     }
 }

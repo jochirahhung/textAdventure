@@ -8,6 +8,7 @@ namespace TextAdventure
 {
     class Weapon
     {
-
+        //durabilty
+        //damage
     }
 }

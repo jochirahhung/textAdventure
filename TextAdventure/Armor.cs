@@ -8,25 +8,22 @@ namespace TextAdventure
 {
     class Armor : Item
     {
+        //durabilty
+        //defense
+        enum ArmorTypes
+        {
+            Leatherarmor,
+            Bronzearmor,
+            Ironarmor,
+            Steelarmor
+        };
 
-        public void LeatherArmor()
+        public void setArmor()
         {
 
         }
 
-
-        public void BronzeArmor()
-        {
-
-        }
-        public void IronArmor()
-        {
-
-        }
-        public void SteelArmor()
-        {
-
-        }
+ 
 
     }
 }
