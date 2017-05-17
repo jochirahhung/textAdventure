@@ -54,7 +54,7 @@ namespace TextAdventure
             {
                 if (level>1)
                 {
-                    lvlmod = 5*level;
+                    lvlmod = 5*(level-1);
                 }
             }
             else if (type == EnemeyTypes.THUG)
