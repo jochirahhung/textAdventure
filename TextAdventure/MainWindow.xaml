@@ -10,7 +10,7 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="310" Margin="71,15,0,0" VerticalAlignment="Top" Width="613" Source="/Images/Title.png"/>
         <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="What would you like to do" VerticalAlignment="Top" Width="432"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="493,409,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="467,413,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>
         <Label x:Name="lblHealth" Content="Health: " HorizontalAlignment="Left" Margin="30,438,0,0" VerticalAlignment="Top" Width="46"/>
         <TextBox x:Name="tbxHealth" HorizontalAlignment="Left" Height="23" Margin="81,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
@@ -20,6 +20,12 @@
         <TextBox x:Name="tbxArmorDur" HorizontalAlignment="Left" Height="23" Margin="369,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
         <Label x:Name="lblDefense" Content="Defense: " HorizontalAlignment="Left" Margin="415,438,0,0" VerticalAlignment="Top" Width="59"/>
         <TextBox x:Name="tbxDefense" HorizontalAlignment="Left" Height="23" Margin="474,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="lblDamage" Content="Damage: " HorizontalAlignment="Left" Margin="510,439,0,0" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="tbxDamage" HorizontalAlignment="Left" Height="23" Margin="565,441,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="lblLevel" Content="Level: " HorizontalAlignment="Left" Margin="544,411,0,0" VerticalAlignment="Top" Width="46"/>
+        <TextBox x:Name="tbxLevel" HorizontalAlignment="Left" Height="23" Margin="581,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
+        <Label x:Name="lblEXP" Content="EXP: " HorizontalAlignment="Left" Margin="614,412,0,0" VerticalAlignment="Top" Width="46"/>
+        <TextBox x:Name="tbxEXP" HorizontalAlignment="Left" Height="23" Margin="644,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33"/>
 
     </Grid>
 </Window>
