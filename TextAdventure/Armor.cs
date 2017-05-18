@@ -13,28 +13,28 @@ namespace TextAdventure
         //defense
     
 
-        public void setArmor()
+        public void setArmor(String action)
         {
             string leatherarmor = "Leather Armor";
             string bronzearmor = "Bronze Armor";
             string ironarmor = "Iron Armor";
             string steelarmor = "Steel Armor";
 
-            if (mw.tbxAction.Text.Contains( leatherarmor)) {
+            if (action.Contains( leatherarmor)) {
                 mw.tbxArmorDur.Text = "3";
                 mw.tbxDefense.Text = "6";
                     }
-            else if (mw.tbxAction.Text.Contains( bronzearmor))
+            else if (action.Contains( bronzearmor))
             {
                 mw.tbxArmorDur.Text = "5";
                 mw.tbxDefense.Text = "8";
             }
-            else if (mw.tbxAction.Text.Contains(ironarmor))
+            else if (action.Contains(ironarmor))
             {
                 mw.tbxArmorDur.Text = "7";
                 mw.tbxDefense.Text = "10";
             }
-            else if (mw.tbxAction.Text.Contains(steelarmor))
+            else if (action.Contains(steelarmor))
             {
                 mw.tbxArmorDur.Text = "9";
                 mw.tbxDefense.Text = "12";

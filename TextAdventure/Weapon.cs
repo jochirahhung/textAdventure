@@ -11,32 +11,36 @@ namespace TextAdventure
         //durabilty
         //damage
         MainWindow mw = new MainWindow();
-        public void setArmor()
+        public String setArmor(String action)
         {
             string bronzesword = "Bronze Sword";
             string ironsword = "Iron Sword";
             string steelsword = "Steel Sword";
             string titaniumsword = "Titanium Sword";
 
-            if (mw.tbxAction.Text.Contains(bronzesword))
+            if (action.Contains(bronzesword))
             {
                 mw.tbxWeaponDur.Text = "3";
                 mw.tbxDamage.Text = "6";
+                return bronzesword;
             }
-            else if (mw.tbxAction.Text.Contains(ironsword))
+            else if (action.Contains(ironsword))
             {
                 mw.tbxWeaponDur.Text = "5";
                 mw.tbxDamage.Text = "8";
+                return ironsword;
             }
-            else if (mw.tbxAction.Text.Contains(steelsword))
+            else if (action.Contains(steelsword))
             {
                 mw.tbxWeaponDur.Text = "7";
                 mw.tbxDamage.Text = "10";
+                return steelsword;
             }
-            else if (mw.tbxAction.Text.Contains(titaniumsword))
+            else if (action.Contains(titaniumsword))
             {
                 mw.tbxWeaponDur.Text = "9";
                 mw.tbxDamage.Text = "12";
+                return titaniumsword;
             }
             else
             {
