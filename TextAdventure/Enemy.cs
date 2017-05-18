@@ -37,10 +37,18 @@ namespace TextAdventure
         }
         public Enemy(string name, EnemeyTypes type)
         {
+            this.name = name;
             this.type = type;
         }
 
-        public string Name { get => name; set => name = value; }
+        public string getName()
+        {
+            return name;
+        }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
         public EnemeyTypes getType()
         {
             return type;
@@ -49,40 +57,52 @@ namespace TextAdventure
         {
             this.type = type;
             setLevel( herolvl);
-            int lvlmod=0;
+            int lvlmod=0, expMod = 0;
             if (type == EnemeyTypes.THEIF)
             {
                 if (level>1)
                 {
                     lvlmod = 5*(level-1);
+                    expMod +=level ;
                 }
+
             }
             else if (type == EnemeyTypes.THUG)
             {
                 lvlmod = 6*level;
+                expMod += (1 + level);
             }
             else if (type == EnemeyTypes.TROLL)
             {
                 lvlmod = 7 * level;
+                expMod += (2 + level);
             }
             else if (type == EnemeyTypes.OGRE)
             {
                 lvlmod = 8 * level;
+                expMod += (3 + level);
 
             }
             else if (type == EnemeyTypes.ORC)
             {
                 lvlmod = 9 * level;
-
+                expMod += (4 + level);
             }
             else if (type == EnemeyTypes.DRAGON)
             {
                 lvlmod = 10 * level;
-
+                expMod += (5 + level);
+            }
+            if (level >= 10)
+            {
+                expMod = 0;
+                exp = 0;
             }
             damage += lvlmod;
             defense += lvlmod;
             health += lvlmod;
+            
+            exp += expMod;
         }
         public int getDamage()
         {
@@ -183,31 +203,6 @@ namespace TextAdventure
         {
             return exp;
         }
-        public void setEXP()
-        {
-            if (type==EnemeyTypes.THEIF)
-            {
-
-            } else if(type == EnemeyTypes.THUG)
-            {
-
-            }
-            else if (type == EnemeyTypes.TROLL)
-            {
-
-            }
-            else if (type == EnemeyTypes.OGRE)
-            {
-
-            }
-            else if (type == EnemeyTypes.ORC)
-            {
-
-            }
-            else if (type == EnemeyTypes.DRAGON)
-            {
-
-            }
-        }
+      
     }
 }
