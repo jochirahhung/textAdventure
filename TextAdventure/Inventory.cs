@@ -8,19 +8,15 @@ namespace TextAdventure
 {
     class Inventory
     {
-        public Item [] Items { get; set; }
+        public Item [] Items { get; }
 
-        public int Capacity { get { return (Items == null) ? 0 : Items.Length; } }
 
         public Inventory(int storage = 10)
         {
-            SizeOfInventory(storage); 
+        
         }
 
-        public void  SizeOfInventory(int cap)
-        {
-            
-        }
+       
     
     }
 }
