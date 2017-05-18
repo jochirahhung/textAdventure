@@ -10,6 +10,7 @@ namespace TextAdventure
     {
         //durabilty
         //damage
+        MainWindow mw = new MainWindow();
         public void setArmor()
         {
             string bronzesword = "Bronze Sword";
@@ -17,30 +18,30 @@ namespace TextAdventure
             string steelsword = "Steel Sword";
             string titaniumsword = "Titanium Sword";
 
-            if (tbxAction.contains(bronzesword))
+            if (mw.tbxAction.Text.Contains(bronzesword))
             {
-                WeaponDur.Text = 3;
-                player.damge = 6;
+                mw.tbxWeaponDur.Text = "3";
+                mw.tbxDamage.Text = "6";
             }
-            else if (tbx.Actions.contains(ironsword))
+            else if (mw.tbxAction.Text.Contains(ironsword))
             {
-                WeaponDur.Text = 5;
-                player.damge = 8;
+                mw.tbxWeaponDur.Text = "5";
+                mw.tbxDamage.Text = "8";
             }
-            else if (tbx.Actions.contains(steelsword))
+            else if (mw.tbxAction.Text.Contains(steelsword))
             {
-                WeaponDur.Text = 7;
-                player.damge = 10;
+                mw.tbxWeaponDur.Text = "7";
+                mw.tbxDamage.Text = "10";
             }
-            else if (tbx.Actions.contains(titaniumsword))
+            else if (mw.tbxAction.Text.Contains(titaniumsword))
             {
-                WeaponDur.Text = 9;
-                player.damge = 12;
+                mw.tbxWeaponDur.Text = "9";
+                mw.tbxDamage.Text = "12";
             }
             else
             {
-                WeaponDur.Text = 0;
-                player.damge = 1;
+                mw.tbxWeaponDur.Text = "0";
+                mw.tbxDamage.Text = "1";
             }
         }
 

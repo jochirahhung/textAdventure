@@ -20,29 +20,29 @@ namespace TextAdventure
             string ironarmor = "Iron Armor";
             string steelarmor = "Steel Armor";
 
-            if (tbxAction.contains( leatherarmor)) {
-                armor.Text = 3;
-                player.Text = 6;
+            if (mw.tbxAction.Text.Contains( leatherarmor)) {
+                mw.tbxArmorDur.Text = "3";
+                mw.tbxDefense.Text = "6";
                     }
-            else if (tbx.Actions.contains( bronzearmor))
+            else if (mw.tbxAction.Text.Contains( bronzearmor))
             {
-                tbxArmorDur.Text = 5;
-                player.Text = 8;
+                mw.tbxArmorDur.Text = "5";
+                mw.tbxDefense.Text = "8";
             }
-            else if (tbx.Actions.contains(ironarmor))
+            else if (mw.tbxAction.Text.Contains(ironarmor))
             {
-                armor.Text = 7;
-                player.Text = 10;
+                mw.tbxArmorDur.Text = "7";
+                mw.tbxDefense.Text = "10";
             }
-            else if (tbx.Actions.contains(steelarmor))
+            else if (mw.tbxAction.Text.Contains(steelarmor))
             {
-                armor.Text = 9;
-                player.Text = 12;
+                mw.tbxArmorDur.Text = "9";
+                mw.tbxDefense.Text = "12";
             }
             else
             {
-                armor.Text = 0;
-                player.Text = 1;
+                mw.tbxArmorDur.Text = "0";
+                mw.tbxDefense.Text = "1";
             }
         }
 
