@@ -8,19 +8,24 @@ namespace TextAdventure
 {
     class Inventory
     {
-        private List<Item> storage = new List<Item>();
+        private List<string> storage = new List<string>();
         Armor a = new Armor();
         Weapon w = new Weapon();
 
         public Inventory(String action)
         {
-            if (action.Contains("Armor") && storage.Count <= 10)
+            if (action.Contains("Armor") || action.Contains("armor") && storage.Count <= 10)
             {
                 storage.Add(a.setArmor(action));
             }
+            else if (action.Contains("Weapon") || action.Contains("weapon") && storage.Count <= 10)
+            {
+                storage.Add(w.setWeapon(action));
+            }
+            else if(action.Contains("Key") || action.Contains("key") && storage.Count <= 10)
+            {
+                storage.Add("Key");
+            }
         }
-
-       
-    
     }
 }

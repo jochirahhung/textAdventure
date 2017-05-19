@@ -11,7 +11,7 @@ namespace TextAdventure
         //durabilty
         //damage
         MainWindow mw = new MainWindow();
-        public String setArmor(String action)
+        public String setWeapon(String action)
         {
             string bronzesword = "Bronze Sword";
             string ironsword = "Iron Sword";
@@ -46,6 +46,7 @@ namespace TextAdventure
             {
                 mw.tbxWeaponDur.Text = "0";
                 mw.tbxDamage.Text = "1";
+                return "No Weapon";
             }
         }
 
