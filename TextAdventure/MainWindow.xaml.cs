@@ -24,5 +24,14 @@ namespace TextAdventure
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            string action = tbxAction.Text;
+            if (action.Contains("next"))
+            {
+                
+            }
+        }
     }
 }

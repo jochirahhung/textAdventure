@@ -24,8 +24,16 @@ namespace TextAdventure
             }
             else if(action.Contains("Key") || action.Contains("key") && storage.Count <= 10)
             {
-                storage.Add("Key");
+                if (storage.Contains("Key"))
+                {
+                    storage.Remove("Key");
+                }
+                else
+                {
+                    storage.Add("Key");
+                }
             }
+
         }
     }
 }
