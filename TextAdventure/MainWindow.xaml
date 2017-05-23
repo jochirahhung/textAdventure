@@ -28,6 +28,10 @@
         <TextBox x:Name="tbxEXP" HorizontalAlignment="Left" Height="23" Margin="644,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblInventory" Content="Inventory: " HorizontalAlignment="Left" Margin="684,15,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxItems" HorizontalAlignment="Left" Height="200" Margin="689,46,0,0" VerticalAlignment="Top" Width="174"/>
-
+        <MediaElement x:Name="media" HorizontalAlignment="Left" Height="139" Margin="689,325,0,0" VerticalAlignment="Top" Width="156"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <!--<AppBarButton Icon="OpenFile" Name="openFile" Label="Open File"  Click="openFile_Click"/>-->
+        </StackPanel>
+        
     </Grid>
 </Window>
