@@ -28,7 +28,7 @@ namespace TextAdventure
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             string action = tbxAction.Text;
-            if (action.Contains("next"))
+            if (action.Contains("start") || action.Contains("Start"))
             {
                 imgLevel.Source = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             }

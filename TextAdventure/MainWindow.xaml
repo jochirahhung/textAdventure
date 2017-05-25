@@ -9,7 +9,7 @@
         Background="Silver">
     <Grid>
         <Image x:Name="imgLevel" HorizontalAlignment="Left" Height="310" Margin="71,15,0,0" VerticalAlignment="Top" Width="606" Source="/Images/Title.png"/>
-        <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="What would you like to do" VerticalAlignment="Top" Width="432"/>
+        <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="432"/>
         <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="467,413,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>
         <Label x:Name="lblHealth" Content="Health: " HorizontalAlignment="Left" Margin="30,438,0,0" VerticalAlignment="Top" Width="46"/>
