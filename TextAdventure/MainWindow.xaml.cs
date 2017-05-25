@@ -30,7 +30,7 @@ namespace TextAdventure
             string action = tbxAction.Text;
             if (action.Contains("next"))
             {
-                
+                imgLevel.Source = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             }
         }
     }
