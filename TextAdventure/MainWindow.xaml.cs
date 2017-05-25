@@ -27,10 +27,16 @@ namespace TextAdventure
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            Inventory i = new Inventory();
+            BitmapImage lvl1 = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             string action = tbxAction.Text;
-            if (action.Contains("start") || action.Contains("Start"))
+            if ((action.Contains("start") || action.Contains("Start")) && !tbxName.Text.Equals(""))
             {
-                imgLevel.Source = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
+                imgLevel.Source = lvl1;
+            }
+            else
+            {
+                tbxAction.Text = "Set Your Name";
             }
         }
     }
