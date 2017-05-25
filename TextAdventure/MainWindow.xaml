@@ -11,23 +11,23 @@
         <Image x:Name="imgLevel" HorizontalAlignment="Left" Height="310" Margin="71,15,0,0" VerticalAlignment="Top" Width="606" Source="/Images/Title.png"/>
         <TextBox x:Name="tbxAction" HorizontalAlignment="Left" Height="29" Margin="30,409,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="432"/>
         <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="467,413,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>
+        <TextBox x:Name="tbxlStory" HorizontalAlignment="Left" Margin="30,325,0,0" TextWrapping="Wrap" Text="Story Goes Here" VerticalAlignment="Top" Height="79" Width="613"/>
         <Label x:Name="lblHealth" Content="Health: " HorizontalAlignment="Left" Margin="30,438,0,0" VerticalAlignment="Top" Width="46"/>
-        <TextBox x:Name="tbxHealth" HorizontalAlignment="Left" Height="23" Margin="81,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxHealth" HorizontalAlignment="Left" Height="23" Margin="81,440,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblWeaponDur" Content="Weapon Durability" HorizontalAlignment="Left" Margin="125,438,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox x:Name="tbxWeaponDur" HorizontalAlignment="Left" Height="23" Margin="232,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxWeaponDur" HorizontalAlignment="Left" Height="23" Margin="232,440,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblArmorDur" Content="Armor Durability" HorizontalAlignment="Left" Margin="271,438,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox x:Name="tbxArmorDur" HorizontalAlignment="Left" Height="23" Margin="369,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxArmorDur" HorizontalAlignment="Left" Height="23" Margin="369,440,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblDefense" Content="Defense: " HorizontalAlignment="Left" Margin="415,438,0,0" VerticalAlignment="Top" Width="59"/>
-        <TextBox x:Name="tbxDefense" HorizontalAlignment="Left" Height="23" Margin="474,440,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxDefense" HorizontalAlignment="Left" Height="23" Margin="474,440,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblDamage" Content="Damage: " HorizontalAlignment="Left" Margin="510,439,0,0" VerticalAlignment="Top" Width="55"/>
-        <TextBox x:Name="tbxDamage" HorizontalAlignment="Left" Height="23" Margin="565,441,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="34" IsReadOnly="True"/>
+        <TextBox x:Name="tbxDamage" HorizontalAlignment="Left" Height="23" Margin="565,441,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="34" IsReadOnly="True"/>
         <Label x:Name="lblLevel" Content="Level: " HorizontalAlignment="Left" Margin="544,411,0,0" VerticalAlignment="Top" Width="46"/>
-        <TextBox x:Name="tbxLevel" HorizontalAlignment="Left" Height="23" Margin="581,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxLevel" HorizontalAlignment="Left" Height="23" Margin="581,414,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblEXP" Content="EXP: " HorizontalAlignment="Left" Margin="614,412,0,0" VerticalAlignment="Top" Width="46"/>
-        <TextBox x:Name="tbxEXP" HorizontalAlignment="Left" Height="23" Margin="644,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
+        <TextBox x:Name="tbxEXP" HorizontalAlignment="Left" Height="23" Margin="644,414,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblInventory" Content="Inventory: " HorizontalAlignment="Left" Margin="689,94,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxItems" HorizontalAlignment="Left" Height="200" Margin="689,125,0,0" VerticalAlignment="Top" Width="174"/>
+        <TextBox x:Name="lbxItems" HorizontalAlignment="Left" Height="200" Margin="689,125,0,0" VerticalAlignment="Top" Width="174"/>
         <MediaElement x:Name="media" HorizontalAlignment="Left" Height="139" Margin="689,325,0,0" VerticalAlignment="Top" Width="156"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <!--<AppBarButton Icon="OpenFile" Name="openFile" Label="Open File"  Click="openFile_Click"/>-->

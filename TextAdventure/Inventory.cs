@@ -27,7 +27,7 @@ namespace TextAdventure
             {
                 storage[3] = "Key";
             }
-            return storage.Length.ToString();
+            return storage[1];
         }
     }
 }
