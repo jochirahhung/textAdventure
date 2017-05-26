@@ -102,6 +102,16 @@ namespace TextAdventure
                 tbxDamage.Text = "12";
                 tbxWeaponDur.Text = "9";
             }
+
+            if (action.Contains("Key"))
+            {
+                tbxKey.Text = i.generateInventory(action);
+            }
+
+            if (action.Contains("Open Door"))
+            {
+                tbxlStory.Text = "Sorry this area is still under construction, lay back down and when you awake, it will be completed";
+            }
             tbxAction.Text = "";
         }
     }
