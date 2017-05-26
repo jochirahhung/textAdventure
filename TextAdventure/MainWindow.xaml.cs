@@ -53,12 +53,54 @@ namespace TextAdventure
 
             if (action.Contains("Armor"))
             {
-                lbxItems.Text =  i.generateInventory(action);
+                tbxArmor.Text =  i.generateInventory(action);
             }
 
-            if (lbxItems.Text.Contains("Leather Armor"))
+            if (tbxArmor.Text.Contains("Leather Armor"))
             {
-                tbxDefense.Text = "3";
+                tbxDefense.Text = "6";
+                tbxArmorDur.Text = "3";
+            }
+            else if (tbxArmor.Text.Contains("Bronze Armor"))
+            {
+                tbxDefense.Text = "8";
+                tbxArmorDur.Text = "5";
+            }
+            else if (tbxArmor.Text.Contains("Iron Armor"))
+            {
+                tbxDefense.Text = "10";
+                tbxArmorDur.Text = "7";
+            }
+            else if (tbxArmor.Text.Contains("Steel Armor"))
+            {
+                tbxDefense.Text = "12";
+                tbxArmorDur.Text = "9";
+            }
+
+            if (action.Contains("Sword"))
+            {
+                tbxWeapon.Text = i.generateInventory(action);
+            }
+
+            if (tbxWeapon.Text.Contains("Bronze Sword"))
+            {
+                tbxDamage.Text = "6";
+                tbxWeaponDur.Text = "3";
+            }
+            else if (tbxWeapon.Text.Contains("Iron Sword"))
+            {
+                tbxDamage.Text = "8";
+                tbxWeaponDur.Text = "5";
+            }
+            else if (tbxWeapon.Text.Contains("Steel Sword"))
+            {
+                tbxDamage.Text = "10";
+                tbxWeaponDur.Text = "7";
+            }
+            else if (tbxWeapon.Text.Contains("Titanium Sword"))
+            {
+                tbxDamage.Text = "12";
+                tbxWeaponDur.Text = "9";
             }
             tbxAction.Text = "";
         }

@@ -26,14 +26,18 @@
         <TextBox x:Name="tbxLevel" HorizontalAlignment="Left" Height="23" Margin="581,414,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
         <Label x:Name="lblEXP" Content="EXP: " HorizontalAlignment="Left" Margin="614,412,0,0" VerticalAlignment="Top" Width="46"/>
         <TextBox x:Name="tbxEXP" HorizontalAlignment="Left" Height="23" Margin="644,414,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="33" IsReadOnly="True"/>
-        <Label x:Name="lblInventory" Content="Inventory: " HorizontalAlignment="Left" Margin="689,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="lbxItems" HorizontalAlignment="Left" Height="200" Margin="689,125,0,0" VerticalAlignment="Top" Width="174"/>
+        <Label x:Name="lblArmor" Content="Armor: " HorizontalAlignment="Left" Margin="689,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxArmor" HorizontalAlignment="Left" Height="32" Margin="689,120,0,0" VerticalAlignment="Top" Width="174"/>
         <MediaElement x:Name="media" HorizontalAlignment="Left" Height="139" Margin="689,325,0,0" VerticalAlignment="Top" Width="156"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <!--<AppBarButton Icon="OpenFile" Name="openFile" Label="Open File"  Click="openFile_Click"/>-->
         </StackPanel>
         <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="689,15,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxName" HorizontalAlignment="Left" Height="23" Margin="689,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblWeapon" Content="Weapon: " HorizontalAlignment="Left" Margin="689,154,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxWeapon" HorizontalAlignment="Left" Height="32" Margin="689,180,0,0" VerticalAlignment="Top" Width="174"/>
+        <Label x:Name="lblKey" Content="Key: " HorizontalAlignment="Left" Margin="689,216,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxKey" HorizontalAlignment="Left" Height="32" Margin="689,242,0,0" VerticalAlignment="Top" Width="174"/>
 
     </Grid>
 </Window>
