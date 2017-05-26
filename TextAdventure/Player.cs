@@ -9,7 +9,7 @@ namespace TextAdventure
     class Player
     {
         private string name;
-        private int damage = 4, defense = 3, health = 10, level = 1, exp = 0;
+        private int damage = 2, defense = 1, health = 100, level = 1, exp = 0;
 
         public Player()
         {
