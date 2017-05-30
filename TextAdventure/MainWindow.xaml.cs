@@ -36,11 +36,18 @@ namespace TextAdventure
             BitmapImage title = new BitmapImage(new Uri("/TextAdventure;component/Images/Title.png", UriKind.Relative));
             BitmapImage lvl1 = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             BitmapImage chest = new BitmapImage(new Uri("/TextAdventure;component/Images/InsideChest.png", UriKind.Relative));
+
+            BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
+            BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
+            BitmapImage Ogre = new BitmapImage(new Uri("/TextAdventure;component/Images/Ogre.png", UriKind.Relative));
+            BitmapImage Orc = new BitmapImage(new Uri("/TextAdventure;component/Images/Orc.png", UriKind.Relative));
+            BitmapImage Thug = new BitmapImage(new Uri("/TextAdventure;component/Images/thug.png", UriKind.Relative));
             string action = tbxAction.Text;
             if ((action.Equals("start") || action.Equals("Start")))
             {
                 imgLevel.Source = lvl1;
                 tbxlStory.Text = "You are in the bedroom, you see a chest in the room, it appears to be unlocked, the door on the other hand is not.";
+                imgenemy.Source = dragon;
             }
             else if (action.Equals("Open chest"))
             {
