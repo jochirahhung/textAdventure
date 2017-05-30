@@ -115,6 +115,7 @@
     <Resource Include="Images\leatherarmor.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="Images\dragon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\thug.png" />
+=======
+    <Resource Include="Images\goblin.png" />
+    <Resource Include="Images\dragon.png" />
+    <Resource Include="Images\thief.png" />
+    <Resource Include="Images\Ogre.png" />
+    <Content Include="Images\Orc.png" />
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
