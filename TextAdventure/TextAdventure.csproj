@@ -114,6 +114,13 @@
   <ItemGroup>
     <Resource Include="Images\leatherarmor.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\goblin.png" />
+    <Resource Include="Images\dragon.png" />
+    <Resource Include="Images\thief.png" />
+    <Resource Include="Images\Ogre.png" />
+    <Content Include="Images\Orc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
