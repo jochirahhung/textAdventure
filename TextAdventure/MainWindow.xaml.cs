@@ -37,6 +37,9 @@ namespace TextAdventure
             BitmapImage title = new BitmapImage(new Uri("/TextAdventure;component/Images/Title.png", UriKind.Relative));
             BitmapImage lvl1 = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             BitmapImage chest = new BitmapImage(new Uri("/TextAdventure;component/Images/InsideChest.png", UriKind.Relative));
+            BitmapImage livingroom = new BitmapImage(new Uri("/TextAdventure;component/Images/living-room.png", UriKind.Relative));
+            BitmapImage hallway = new BitmapImage(new Uri("/TextAdventure;component/Images/Hallway.png", UriKind.Relative));
+
 
             BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
             BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
@@ -108,9 +111,10 @@ namespace TextAdventure
                 tbxKey.Text = i.generateInventory(action);
             }
 
-            if (action.Contains("Open Door"))
+            if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase))
             {
-                tbxlStory.Text = "Sorry this area is still under construction, lay back down and when you awake, it will be completed";
+                imgLevel.Source = hallway;
+                tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room";
             }
 
             if (action.Contains("Fight"))
