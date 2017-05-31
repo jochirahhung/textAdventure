@@ -33,6 +33,7 @@ namespace TextAdventure
         private void game()
         {
             Inventory i = new Inventory();
+            Enemy e = new Enemy();
             BitmapImage title = new BitmapImage(new Uri("/TextAdventure;component/Images/Title.png", UriKind.Relative));
             BitmapImage lvl1 = new BitmapImage(new Uri("/TextAdventure;component/Images/AdventureLVL1.jpg", UriKind.Relative));
             BitmapImage chest = new BitmapImage(new Uri("/TextAdventure;component/Images/InsideChest.png", UriKind.Relative));
@@ -111,6 +112,30 @@ namespace TextAdventure
             {
                 tbxlStory.Text = "Sorry this area is still under construction, lay back down and when you awake, it will be completed";
             }
+
+            if (action.Contains("Fight"))
+            {
+                if (action.Contains("dragon") || action.Contains("Dragon"))
+                {
+                    e.setEnemy(EnemeyTypes.DRAGON, int.Parse(tbxLevel.Text));
+                    tbxEnemyHeatlh.Text = e.getHealth().ToString();
+                    tbxEnemyLVL.Text = e.getLevel().ToString();
+                }
+
+                if (action.Contains("goblin") || action.Contains("Goblin"))
+                {
+                    e.setEnemy(EnemeyTypes.ORC, int.Parse(tbxLevel.Text));
+                    tbxEnemyHeatlh.Text = e.getHealth().ToString();
+                    tbxEnemyLVL.Text = e.getLevel().ToString();
+                }
+                if (action.Contains("orc") || action.Contains("Orc"))
+                {
+                    e.setEnemy(EnemeyTypes.ORC, int.Parse(tbxLevel.Text));
+                    tbxEnemyHeatlh.Text = e.getHealth().ToString();
+                    tbxEnemyLVL.Text = e.getLevel().ToString();
+                }
+            }
+
             tbxAction.Text = "";
         }
     }
