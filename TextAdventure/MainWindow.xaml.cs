@@ -219,7 +219,7 @@ namespace TextAdventure
                         tbxEnemy.Text = "Thug";
                     }
                 }
-                else if (action.Contains("Outside") || action.Contains("outside") && tbxKey.Text.Equals("Key"))
+                else if (action.Contains("Forest") || action.Contains("forest") && tbxKey.Text.Equals("Key"))
                 {
                     imgLevel.Source = outside;
                     tbxlStory.Text = "You are now outside, and this is the final battle, you must defeat the dragon to win the game!!";
@@ -241,7 +241,7 @@ namespace TextAdventure
                 else if (action.Contains("living room") || action.Contains("Living room"))
                 {
                     imgLevel.Source = livingroom;
-                    tbxlStory.Text = "You enter the living room to find an orc in the area, you have to fight him to pass! When you destroy him, you can go to the basement, or the kitchen from here";
+                    tbxlStory.Text = "You enter the living room to find an orc in the area, you have to fight him to pass! When you destroy him, you can go to the basement, or the kitchen from here, and if you have a key, you may enter the forest outside";
                     imgenemy.Source = Orc;
                     tbxEnemy.Text = "Orc";
                 }
