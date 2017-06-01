@@ -42,7 +42,7 @@ namespace TextAdventure
             else
             {
                 mw.tbxDefense.Text = "1";
-                return "No Armor";
+                return null;
             }
         }
 

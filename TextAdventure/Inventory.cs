@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TextAdventure
 {
-    class Inventory
+    public class Inventory
     {
         private string[] storage = new string[10];
         Armor a = new Armor();

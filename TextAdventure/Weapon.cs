@@ -41,7 +41,7 @@ namespace TextAdventure
             else
             {
                 mw.tbxDamage.Text = "1";
-                return "No Weapon";
+                return null;
             }
         }
 

@@ -1,0 +1,9 @@
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\ArmorAndWeaponTests.dll
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\ArmorAndWeaponTests.pdb
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\TextAdventure.exe
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\TextAdventure.pdb
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\obj\Debug\ArmorAndWeaponTests.csprojResolveAssemblyReference.cache
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\obj\Debug\ArmorAndWeaponTests.dll
+C:\Users\Jochi\Documents\GitHub\textAdventure\ArmorAndWeaponTests\obj\Debug\ArmorAndWeaponTests.pdb

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventure", "TextAdventure\TextAdventure.csproj", "{D2931E43-B161-452A-8469-3AB24F644178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmorAndWeaponTests", "ArmorAndWeaponTests\ArmorAndWeaponTests.csproj", "{A00DAE14-15F3-4BD8-953E-F38785142D22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D2931E43-B161-452A-8469-3AB24F644178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2931E43-B161-452A-8469-3AB24F644178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2931E43-B161-452A-8469-3AB24F644178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00DAE14-15F3-4BD8-953E-F38785142D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00DAE14-15F3-4BD8-953E-F38785142D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00DAE14-15F3-4BD8-953E-F38785142D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00DAE14-15F3-4BD8-953E-F38785142D22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
