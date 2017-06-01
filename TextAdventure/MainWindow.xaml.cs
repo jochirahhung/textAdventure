@@ -50,6 +50,8 @@ namespace TextAdventure
 
             BitmapImage Key = new BitmapImage(new Uri("/TextAdventure;component/Images/Key.png", UriKind.Relative));
             BitmapImage Leather = new BitmapImage(new Uri("/TextAdventure;component/Images/leatherarmor.png", UriKind.Relative));
+
+            BitmapImage bronzeSword = new BitmapImage(new Uri("/TextAdventure;component/Images/bronzesword.png", UriKind.Relative));
             string action = tbxAction.Text;
             if ((action.Equals("start") || action.Equals("Start")))
             {
@@ -130,8 +132,9 @@ namespace TextAdventure
             if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase) && tbxKey.Text.Equals("Key"))
             {
                 imgLevel.Source = hallway;
+                imgSword.Source = bronzeSword;
                 tbxKey.Text = "";
-                tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room";
+                tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room, there is also a bronze sword stuck in the wall, you may take it.";
             }
 
             if (action.Contains("Go") || action.Contains("go"))
