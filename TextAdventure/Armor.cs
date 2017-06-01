@@ -20,21 +20,21 @@ namespace TextAdventure
             string ironarmor = "Iron Armor";
             string steelarmor = "Steel Armor";
 
-            if (action.Contains( leatherarmor)) {
+            if (action.Contains( leatherarmor) || action.Contains("leather armor")) {
                 mw.tbxDefense.Text = "6";
                 return leatherarmor;
             }
-            else if (action.Contains( bronzearmor))
+            else if (action.Contains( bronzearmor) || action.Contains("bronze armor"))
             {
                 mw.tbxDefense.Text = "8";
                 return bronzearmor;
             }
-            else if (action.Contains(ironarmor))
+            else if (action.Contains(ironarmor) || action.Contains("iron armor"))
             {
                 mw.tbxDefense.Text = "10";
                 return ironarmor;
             }
-            else if (action.Contains(steelarmor))
+            else if (action.Contains(steelarmor) || action.Contains("steel armor"))
             {
                 mw.tbxDefense.Text = "12";
                 return steelarmor;

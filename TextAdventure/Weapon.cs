@@ -18,22 +18,22 @@ namespace TextAdventure
             string steelsword = "Steel Sword";
             string titaniumsword = "Titanium Sword";
 
-            if (action.Contains(bronzesword))
+            if (action.Contains(bronzesword) || action.Contains("bronze sword"))
             {
                 mw.tbxDamage.Text = "6";
                 return bronzesword;
             }
-            else if (action.Contains(ironsword))
+            else if (action.Contains(ironsword) || action.Contains("iron sword"))
             {
                 mw.tbxDamage.Text = "8";
                 return ironsword;
             }
-            else if (action.Contains(steelsword))
+            else if (action.Contains(steelsword) || action.Contains("steel sword"))
             {
                 mw.tbxDamage.Text = "10";
                 return steelsword;
             }
-            else if (action.Contains(titaniumsword))
+            else if (action.Contains(titaniumsword) || action.Contains("titanium sword"))
             {
                 mw.tbxDamage.Text = "12";
                 return titaniumsword;

@@ -73,13 +73,13 @@ namespace TextAdventure
                 imgArmor.Source = Leather;
                 imgKey.Source = Key;
             }
-            else if (action.Equals("Leave chest"))
+            else if (action.Equals("Leave chest", StringComparison.CurrentCultureIgnoreCase))
             {
                 imgLevel.Source = lvl1;
                 tbxlStory.Text = "You are in the bedroom, you see a chest in the room, it appears to be unlocked, the door on the other hand is not.";
             }
 
-            if (action.Contains("Armor"))
+            if (action.Contains("Armor") || action.Contains("armor"))
             {
                 tbxArmor.Text =  i.generateInventory(action);
             }
@@ -150,14 +150,16 @@ namespace TextAdventure
                 if (action.Contains("kitchen") || action.Contains("Kitchen"))
                 {
                     imgLevel.Source = kitchen;
-                    if (tbxWeapon.Text.Equals("Iron Sword"))
+                    if (!tbxWeapon.Text.Equals("Iron Sword"))
                     {
-                        tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but you can go to the storage room from here! Or to the dining room";
+                        tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but you can go to the storage room from here! Or to the dining room, but first you must defeat this enemy";
+                        imgSword.Source = ironSword;
+                        imgenemy.Source = goblin;
+                        tbxEnemy.Text = "Goblin";
                     }
                     else
                     {
-                        tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but a sword, but you can go to the storage room from here! Or to the dining room";
-                        imgSword.Source = ironSword;
+                        tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but a sword, but you can go to the storage room from here! Or to the dining room, but first you must defeat this enemy";
                     }
                 }
                 else if (action.Contains("dining room") || action.Contains("Dining room"))
