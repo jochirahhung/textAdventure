@@ -105,7 +105,7 @@ namespace TextAdventure
                 imgArmor.Source = null;
             }
 
-            if (action.Contains("Sword"))
+            if (action.Contains("Sword") || action.Contains("sword"))
             {
                 tbxWeapon.Text = i.generateInventory(action);
             }
@@ -131,7 +131,7 @@ namespace TextAdventure
                 imgSword.Source = null;
             }
 
-            if (action.Contains("Key"))
+            if (action.Contains("Key") || action.Contains("key"))
             {
                 tbxKey.Text = i.generateInventory(action);
                 imgKey.Source = null;
@@ -145,7 +145,7 @@ namespace TextAdventure
                 tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room, there is also a bronze sword stuck in the wall, you may take it.";
             }
 
-            if (action.Contains("Go") || action.Contains("go"))
+            if (action.Contains("enter") || action.Contains("Enter"))
             {
                 if (action.Contains("kitchen") || action.Contains("Kitchen"))
                 {
@@ -176,7 +176,7 @@ namespace TextAdventure
                 }
                 else if (action.Contains("Storage") || action.Contains("storage"))
                 {
-                    if (tbxWeapon.Text.Equals("Steel Sword"))
+                    if (!tbxWeapon.Text.Equals("Steel Sword"))
                     {
                         tbxlStory.Text = "This is the storage room, a steel sword appears to be in here, along with an enemy, you may pick up the sword then fight him, or not, you decide";
                         imgSword.Source = steelSword;
@@ -237,7 +237,6 @@ namespace TextAdventure
                 {
                     tbxlStory.Text = "Sorry this room does not exist, please try another room";
                 }
-
 
             }
 
