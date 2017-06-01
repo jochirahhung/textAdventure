@@ -169,7 +169,10 @@ namespace TextAdventure
                 }
                 else if (action.Contains("living room") || action.Contains("Living room"))
                 {
-
+                    imgLevel.Source = livingroom;
+                    tbxlStory.Text = "You enter the living room to find an orc in the area, you have to fight him to pass!";
+                    imgenemy.Source = Orc;
+                    tbxEnemy.Text = "Orc";
                 }
                 else
                 {
@@ -224,6 +227,7 @@ namespace TextAdventure
                     tbxEXP.Text = exp.ToString();
                     tbxEnemyHeatlh.Text = "0";
                     tbxEnemyLVL.Text = "0";
+                    tbxEnemy.Text = "";
                 }
                 else
                 {
