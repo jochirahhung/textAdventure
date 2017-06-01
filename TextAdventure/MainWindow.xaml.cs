@@ -41,6 +41,7 @@ namespace TextAdventure
             BitmapImage livingroom = new BitmapImage(new Uri("/TextAdventure;component/Images/living-room.png", UriKind.Relative));
             BitmapImage hallway = new BitmapImage(new Uri("/TextAdventure;component/Images/Hallway.png", UriKind.Relative));
             BitmapImage kitchen = new BitmapImage(new Uri("/TextAdventure;component/Images/Kitchen.png", UriKind.Relative));
+            BitmapImage storage = new BitmapImage(new Uri("/TextAdventure;component/Images/storageroom.png", UriKind.Relative));
 
             BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
             BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
@@ -178,6 +179,7 @@ namespace TextAdventure
                 {
                     if (!tbxWeapon.Text.Equals("Steel Sword"))
                     {
+                        imgLevel.Source = storage;
                         tbxlStory.Text = "This is the storage room, a steel sword appears to be in here, along with an enemy, you may pick up the sword then fight him, or not, you decide";
                         imgSword.Source = steelSword;
                         imgenemy.Source = Ogre;
@@ -185,6 +187,7 @@ namespace TextAdventure
                     }
                     else
                     {
+                        imgLevel.Source = storage;
                         tbxlStory.Text = "This is the storage room, only way out is through the kitchen, but an ogre is here, you must fight to leave.";
                         imgenemy.Source = Ogre;
                         tbxEnemy.Text = "Ogre";
