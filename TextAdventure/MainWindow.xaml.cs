@@ -40,7 +40,7 @@ namespace TextAdventure
             BitmapImage chest = new BitmapImage(new Uri("/TextAdventure;component/Images/InsideChest.png", UriKind.Relative));
             BitmapImage livingroom = new BitmapImage(new Uri("/TextAdventure;component/Images/living-room.png", UriKind.Relative));
             BitmapImage hallway = new BitmapImage(new Uri("/TextAdventure;component/Images/Hallway.png", UriKind.Relative));
-
+            BitmapImage kitchen = new BitmapImage(new Uri("/TextAdventure;component/Images/Kitchen.png", UriKind.Relative));
 
             BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
             BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
