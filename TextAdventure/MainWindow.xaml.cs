@@ -138,7 +138,6 @@ namespace TextAdventure
             if (action.Contains("Key") || action.Contains("key"))
             {
                 tbxKey.Text = i.generateInventory(action);
-                imgKey.Source = null;
             }
 
             if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase) && tbxKey.Text.Equals("Key"))
@@ -193,6 +192,7 @@ namespace TextAdventure
                         imgSword.Source = steelSword;
                         imgenemy.Source = Ogre;
                         tbxEnemy.Text = "Ogre";
+                        imgKey.Source = Key;
                     }
                     else
                     {
@@ -200,23 +200,21 @@ namespace TextAdventure
                         tbxlStory.Text = "This is the storage room, only way out is through the kitchen, but an ogre is here, you must fight to leave.";
                         imgenemy.Source = Ogre;
                         tbxEnemy.Text = "Ogre";
-                        imgKey.Source = Key;
                     }
                 }
                 else if (action.Contains("basement") || action.Contains("Basement"))
                 {
+                    imgLevel.Source = basement;
                     if (!tbxArmor.Text.Equals("Steel Armor") && !tbxWeapon.Text.Equals("Titanium Sword"))
                     {
                         imgArmor.Source = Steel;
                         imgSword.Source = titaniumSword;
-                        imgLevel.Source = basement;
                         tbxlStory.Text = "This is the basement, here you now have access to the steel armor, pick it up for more defense, and the titanium sword for more damage. There is also an enemy here";
                         imgenemy.Source = Thug;
                         tbxEnemy.Text = "Thug";
                     }
                     else
                     {
-                        imgLevel.Source = basement;
                         tbxlStory.Text = "This is the basement, only an enemy is in here";
                         imgenemy.Source = Thug;
                         tbxEnemy.Text = "Thug";
@@ -225,7 +223,7 @@ namespace TextAdventure
                 else if (action.Contains("Forest") || action.Contains("forest") && tbxKey.Text.Equals("Key"))
                 {
                     imgLevel.Source = outside;
-                    tbxlStory.Text = "You are now outside, and this is the final battle, you must defeat the dragon to win the game!!";
+                    tbxlStory.Text = "You are now outside, and this is the final battle, you must defeat the dragon to enter your house, when the dragon is killed, type in enter home, and you win the game!";
                     imgenemy.Source = dragon;
                     tbxEnemy.Text = "Dragon";
                 }
