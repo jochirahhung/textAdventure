@@ -197,6 +197,7 @@ namespace TextAdventure
                         tbxlStory.Text = "This is the storage room, only way out is through the kitchen, but an ogre is here, you must fight to leave.";
                         imgenemy.Source = Ogre;
                         tbxEnemy.Text = "Ogre";
+                        imgKey.Source = Key;
                     }
                 }
                 else if (action.Contains("basement") || action.Contains("Basement"))
@@ -244,9 +245,10 @@ namespace TextAdventure
                     imgenemy.Source = Orc;
                     tbxEnemy.Text = "Orc";
                 }
-                else if ((action.Contains("Home") || action.Contains("home")) && imgenemy.Source.Equals(null))
+                else if ((action.Contains("Home") || action.Contains("home")))
                 {
                     imgLevel.Source = title;
+                    imgenemy.Source = null;
                     tbxlStory.Text = "You did it, you made it home and woke up from you nightmare, but it is not over yet, before you wake up you hear a voice say, 'All your item are belong to us!'";
                 }
                 else
@@ -256,7 +258,7 @@ namespace TextAdventure
 
             }
 
-            if (action.Contains("Fight"))
+            if (action.Contains("Fight") || action.Contains("fight"))
             {
                 if (action.Contains("dragon") || action.Contains("Dragon"))
                 {
