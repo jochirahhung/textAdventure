@@ -127,10 +127,51 @@ namespace TextAdventure
                 imgKey.Source = null;
             }
 
-            if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase))
+            if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase) && tbxKey.Text.Equals("Key"))
             {
                 imgLevel.Source = hallway;
+                tbxKey.Text = "";
                 tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room";
+            }
+
+            if (action.Contains("Go") || action.Contains("go"))
+            {
+                if (action.Contains("kitchen") || action.Contains("Kitchen"))
+                {
+
+                }
+                else if (action.Contains("dining room") || action.Contains("Dining room"))
+                {
+
+                }
+                else if (action.Contains("Storage") || action.Contains("storage"))
+                {
+
+                }
+                else if (action.Contains("basement") || action.Contains("Basement"))
+                {
+
+                }
+                else if (action.Contains("Outside") || action.Contains("outside"))
+                {
+
+                }
+                else if (action.Contains("hallway") || action.Contains("Hallway"))
+                {
+
+                }
+                else if (action.Contains("bedroom") || action.Contains("Bedroom"))
+                {
+
+                }
+                else if (action.Contains("living room") || action.Contains("Living room"))
+                {
+
+                }
+                else
+                {
+                    tbxlStory.Text = "Sorry this room does not exist, please try another room";
+                }
             }
 
             if (action.Contains("Fight"))
