@@ -44,6 +44,7 @@ namespace TextAdventure
             BitmapImage storage = new BitmapImage(new Uri("/TextAdventure;component/Images/storageroom.png", UriKind.Relative));
             BitmapImage basement = new BitmapImage(new Uri("/TextAdventure;component/Images/basement.png", UriKind.Relative));
             BitmapImage outside = new BitmapImage(new Uri("/TextAdventure;component/Images/Outside.png", UriKind.Relative));
+            BitmapImage dinner = new BitmapImage(new Uri("/TextAdventure;component/Images/dinning.png", UriKind.Relative));
 
             BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
             BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
@@ -174,11 +175,13 @@ namespace TextAdventure
                         tbxlStory.Text = "This is the dining room, from here there is only one way to go, back to the kitchen, but there is some bronze armor here, and it looks to be in good condition.";
                         imgArmor.Source = Bronze;
                         imgenemy.Source = null;
+                        imgLevel.Source = dinner;
                     }
                     else
                     {
                         tbxlStory.Text = "This is the dining room, from here there is only one way to go, back to the kitchen";
                         imgenemy.Source = null;
+                        imgLevel.Source = dinner;
                     }
                 }
                 else if (action.Contains("Storage") || action.Contains("storage"))
