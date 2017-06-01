@@ -42,6 +42,8 @@ namespace TextAdventure
             BitmapImage hallway = new BitmapImage(new Uri("/TextAdventure;component/Images/Hallway.png", UriKind.Relative));
             BitmapImage kitchen = new BitmapImage(new Uri("/TextAdventure;component/Images/Kitchen.png", UriKind.Relative));
             BitmapImage storage = new BitmapImage(new Uri("/TextAdventure;component/Images/storageroom.png", UriKind.Relative));
+            BitmapImage basement = new BitmapImage(new Uri("/TextAdventure;component/Images/basement.png", UriKind.Relative));
+            BitmapImage outside = new BitmapImage(new Uri("/TextAdventure;component/Images/Outside.png", UriKind.Relative));
 
             BitmapImage dragon = new BitmapImage(new Uri("/TextAdventure;component/Images/dragon.png", UriKind.Relative));
             BitmapImage goblin = new BitmapImage(new Uri("/TextAdventure;component/Images/goblin.png", UriKind.Relative));
@@ -161,6 +163,8 @@ namespace TextAdventure
                     else
                     {
                         tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but a sword, but you can go to the storage room from here! Or to the dining room, but first you must defeat this enemy";
+                        imgenemy.Source = goblin;
+                        tbxEnemy.Text = "Goblin";
                     }
                 }
                 else if (action.Contains("dining room") || action.Contains("Dining room"))
@@ -169,10 +173,12 @@ namespace TextAdventure
                     {
                         tbxlStory.Text = "This is the dining room, from here there is only one way to go, back to the kitchen, but there is some bronze armor here, and it looks to be in good condition.";
                         imgArmor.Source = Bronze;
+                        imgenemy.Source = null;
                     }
                     else
                     {
                         tbxlStory.Text = "This is the dining room, from here there is only one way to go, back to the kitchen";
+                        imgenemy.Source = null;
                     }
                 }
                 else if (action.Contains("Storage") || action.Contains("storage"))
@@ -195,14 +201,18 @@ namespace TextAdventure
                 }
                 else if (action.Contains("basement") || action.Contains("Basement"))
                 {
-                    if (!tbxArmor.Text.Equals("Steel Armor"))
+                    if (!tbxArmor.Text.Equals("Steel Armor") && !tbxWeapon.Text.Equals("Titanium Sword"))
                     {
-                        tbxlStory.Text = "This is the basement, here you now have access to the steel armor, pick it up for more defense. There is also an enemy here";
+                        imgArmor.Source = Steel;
+                        imgSword.Source = titaniumSword;
+                        imgLevel.Source = basement;
+                        tbxlStory.Text = "This is the basement, here you now have access to the steel armor, pick it up for more defense, and the titanium sword for more damage. There is also an enemy here";
                         imgenemy.Source = Thug;
                         tbxEnemy.Text = "Thug";
                     }
                     else
                     {
+                        imgLevel.Source = basement;
                         tbxlStory.Text = "This is the basement, only an enemy is in here";
                         imgenemy.Source = Thug;
                         tbxEnemy.Text = "Thug";
@@ -210,6 +220,7 @@ namespace TextAdventure
                 }
                 else if (action.Contains("Outside") || action.Contains("outside") && tbxKey.Text.Equals("Key"))
                 {
+                    imgLevel.Source = outside;
                     tbxlStory.Text = "You are now outside, and this is the final battle, you must defeat the dragon to win the game!!";
                     imgenemy.Source = dragon;
                     tbxEnemy.Text = "Dragon";
@@ -217,12 +228,14 @@ namespace TextAdventure
                 else if (action.Contains("hallway") || action.Contains("Hallway"))
                 {
                     imgLevel.Source = hallway;
+                    imgenemy.Source = null;
                     tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs, going straigh leads you to go to the living room";
                 }
                 else if (action.Contains("bedroom") || action.Contains("Bedroom"))
                 {
                     tbxlStory.Text = "This is where you started, nothing in here. And the chest appears to be mysteriously locked";
                     imgLevel.Source = lvl1;
+                    imgenemy.Source = null;
                 }
                 else if (action.Contains("living room") || action.Contains("Living room"))
                 {
@@ -231,7 +244,7 @@ namespace TextAdventure
                     imgenemy.Source = Orc;
                     tbxEnemy.Text = "Orc";
                 }
-                else if (action.Contains("Home"))
+                else if ((action.Contains("Home") || action.Contains("home")) && imgenemy.Source.Equals(null))
                 {
                     imgLevel.Source = title;
                     tbxlStory.Text = "You did it, you made it home and woke up from you nightmare, but it is not over yet, before you wake up you hear a voice say, 'All your item are belong to us!'";
