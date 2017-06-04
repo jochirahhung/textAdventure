@@ -29,6 +29,7 @@ namespace TextAdventure
         {
             game();
         }
+        private string keytxt = "", weaponintro = "Weapon:", armorintro = "Armor:";
 
         private void game()
         {
@@ -70,7 +71,7 @@ namespace TextAdventure
                 imgLevel.Source = lvl1;
                 tbxlStory.Text = "You are in the bedroom, you see a chest in the room, it appears to be unlocked, the door on the other hand is not.";
             }
-            else if (action.Equals("Open chest", StringComparison.CurrentCultureIgnoreCase) && tbxArmor.Text.Equals("") && tbxKey.Text.Equals(""))
+            else if (action.Equals("Open chest", StringComparison.CurrentCultureIgnoreCase) && armor.Content.Equals("Armor:") && key.Content.Equals("Key:"))
             {
                 tbxlStory.Text = "You open the chest and inside is the leather armor, and a key";
                 imgLevel.Source = chest;
@@ -85,25 +86,25 @@ namespace TextAdventure
 
             if (action.Contains("Armor") || action.Contains("armor"))
             {
-                tbxArmor.Text =  i.generateInventory(action);
+                armor.Content = armorintro + i.generateInventory(action);
             }
 
-            if (tbxArmor.Text.Contains("Leather Armor"))
+            if (armor.Content.Equals("Armor: Leather Armor"))
             {
                 tbxDefense.Text = "6";
                 imgArmor.Source = null;
             }
-            else if (tbxArmor.Text.Contains("Bronze Armor"))
+            else if (armor.Content.Equals("Armor: Bronze Armor"))
             {
                 tbxDefense.Text = "8";
                 imgArmor.Source = null;
             }
-            else if (tbxArmor.Text.Contains("Iron Armor"))
+            else if (armor.Content.Equals("Armor: Iron Armor"))
             {
                 tbxDefense.Text = "10";
                 imgArmor.Source = null;
             }
-            else if (tbxArmor.Text.Contains("Steel Armor"))
+            else if (armor.Content.Equals("Armor: Steel Armor"))
             {
                 tbxDefense.Text = "12";
                 imgArmor.Source = null;
@@ -111,40 +112,40 @@ namespace TextAdventure
 
             if (action.Contains("Sword") || action.Contains("sword"))
             {
-                tbxWeapon.Text = i.generateInventory(action);
+                weapon.Content = weaponintro + i.generateInventory(action);
             }
 
-            if (tbxWeapon.Text.Contains("Bronze Sword"))
+            if (weapon.Content.Equals("Weapon: Bronze Sword"))
             {
                 tbxDamage.Text = "6";
                 imgSword.Source = null;
             }
-            else if (tbxWeapon.Text.Contains("Iron Sword"))
+            else if (weapon.Content.Equals("Weapon: Iron Sword"))
             {
                 tbxDamage.Text = "8";
                 imgSword.Source = null;
             }
-            else if (tbxWeapon.Text.Contains("Steel Sword"))
+            else if (weapon.Content.Equals("Weapon: Steel Sword"))
             {
                 tbxDamage.Text = "10";
                 imgSword.Source = null;
             }
-            else if (tbxWeapon.Text.Contains("Titanium Sword"))
+            else if (weapon.Content.Equals("Weapon: Titanium Sword"))
             {
                 tbxDamage.Text = "12";
                 imgSword.Source = null;
             }
-
             if (action.Contains("Key") || action.Contains("key"))
             {
-                tbxKey.Text = i.generateInventory(action);
+                key.Content += " " + i.generateInventory(action);
+                keytxt = key.Content.ToString();
             }
 
-            if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase) && tbxKey.Text.Equals("Key"))
+            if (action.Equals("Open Door", StringComparison.CurrentCultureIgnoreCase) && key.Content.Equals(keytxt))
             {
                 imgLevel.Source = hallway;
                 imgSword.Source = bronzeSword;
-                tbxKey.Text = "";
+                key.Content = "Key:";
                 tbxlStory.Text = "As you open up the door and walk through it you enter a hallway that is poorly lit.As you walk down the hall you see two doors without knobs,which leads you to go to the living room, there is also a bronze sword stuck in the wall, you may take it.";
             }
 
@@ -153,7 +154,7 @@ namespace TextAdventure
                 if (action.Contains("kitchen") || action.Contains("Kitchen"))
                 {
                     imgLevel.Source = kitchen;
-                    if (!tbxWeapon.Text.Equals("Iron Sword"))
+                    if (!weapon.Content.Equals("Weapon: Iron Sword"))
                     {
                         tbxlStory.Text = "This is the kitchen, there is not anything in here that is interesting, but you can go to the storage room from here! Or to the dining room, but first you must defeat this enemy";
                         imgSword.Source = ironSword;
@@ -169,7 +170,7 @@ namespace TextAdventure
                 }
                 else if (action.Contains("dining room") || action.Contains("Dining room"))
                 {
-                    if (!tbxArmor.Text.Equals("Bronze Armor"))
+                    if (!armor.Content.Equals("Armor: Bronze Armor"))
                     {
                         tbxlStory.Text = "This is the dining room, from here there is only one way to go, back to the kitchen, but there is some bronze armor here, and it looks to be in good condition.";
                         imgArmor.Source = Bronze;
@@ -185,7 +186,7 @@ namespace TextAdventure
                 }
                 else if (action.Contains("Storage") || action.Contains("storage"))
                 {
-                    if (!tbxWeapon.Text.Equals("Steel Sword"))
+                    if (!weapon.Content.Equals("Weapon: Steel Sword"))
                     {
                         imgLevel.Source = storage;
                         tbxlStory.Text = "This is the storage room, a steel sword appears to be in here, along with an enemy, you may pick up the sword then fight him, or not, you decide";
@@ -205,7 +206,7 @@ namespace TextAdventure
                 else if (action.Contains("basement") || action.Contains("Basement"))
                 {
                     imgLevel.Source = basement;
-                    if (!tbxArmor.Text.Equals("Steel Armor") && !tbxWeapon.Text.Equals("Titanium Sword"))
+                    if (!armor.Content.Equals("Weapon: Steel Armor") && !weapon.Content.Equals("Weapon: Titanium Sword"))
                     {
                         imgArmor.Source = Steel;
                         imgSword.Source = titaniumSword;
@@ -220,7 +221,7 @@ namespace TextAdventure
                         tbxEnemy.Text = "Thug";
                     }
                 }
-                else if (action.Contains("Forest") || action.Contains("forest") && tbxKey.Text.Equals("Key"))
+                else if (action.Contains("Forest") || action.Contains("forest") && key.Content.Equals(keytxt))
                 {
                     imgLevel.Source = outside;
                     tbxlStory.Text = "You are now outside, and this is the final battle, you must defeat the dragon to enter your house, when the dragon is killed, type in enter home, and you win the game!";
@@ -329,7 +330,7 @@ namespace TextAdventure
             if (lvlUP >= 25)
             {
                 int lvl = int.Parse(tbxLevel.Text);
-                lvl = lvl+1;
+                lvl = lvl + 1;
                 tbxLevel.Text = lvl.ToString();
                 tbxEXP.Text = "0";
             }
